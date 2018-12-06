@@ -3,7 +3,9 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-import './layout.css'
+import Normalize from './Normalize'
+import GlobalStyles from './GlobalStyles'
+import PageHeader from './PageHeader'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -19,6 +21,7 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Helmet
+          link={[{rel: 'stylesheet', href: 'https://use.typekit.net/uis3gee.css'}]}
           title={data.site.siteMetadata.title}
           meta={[
             { name: 'description', content: 'Sample' },
@@ -27,6 +30,9 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
+        <Normalize />
+        <GlobalStyles />
+        <PageHeader siteTitle={data.site.siteMetadata.title} />
         <div
           style={{
             margin: '0 auto',
