@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Logo from './Logo'
-import Navigation from './Navigation'
+import Container from '../Container'
+import HeaderLogo from './HeaderLogo'
+import HeaderNav from './HeaderNav'
 import { medLarge, large } from '../../styles/variables'
 import { clearfix, media } from '../../styles/mixins'
 
@@ -19,7 +20,7 @@ const Header = styled.header`
   z-index: 10;
 `
 
-const Container = styled.div`
+const StyledContainer = styled(Container)`
   ${clearfix}
   ${media(medLarge)`
     padding: 2em;
@@ -31,10 +32,10 @@ const Container = styled.div`
 
 const PageHeader = () => (
   <Header>
-    <Container>
-      <Logo />
-      <Navigation items={navItems} />
-    </Container>
+    <StyledContainer>
+      <HeaderLogo />
+      <HeaderNav items={navItems} />
+    </StyledContainer>
   </Header>
 )
 

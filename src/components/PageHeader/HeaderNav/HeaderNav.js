@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-import NavigationToggle from './NavigationToggle'
-import NavigationItem from './NavigationItem'
+import HeaderNavToggle from './HeaderNavToggle'
+import HeaderNavItem from './HeaderNavItem'
 import { brandPurpleLight, medLarge } from '../../../styles/variables'
 import { media } from '../../../styles/mixins'
 
@@ -30,7 +30,7 @@ const Nav = styled.nav`
   `}
 `
 
-class Navigation extends React.Component {
+class HeaderNav extends React.Component {
   state = {
     isMobileNavVisible: false
   }
@@ -47,16 +47,16 @@ class Navigation extends React.Component {
 
     return (
       <>
-        <NavigationToggle
+        <HeaderNavToggle
           isNavVisible={isMobileNavVisible}
           onClick={this._toggleMobileNav}
         />
         <Nav isVisible={isMobileNavVisible}>
           <ul>
             {items.map(({ caption, path }, i) => (
-              <NavigationItem key={i} to={path}>
+              <HeaderNavItem key={i} to={path}>
                 {caption}
-              </NavigationItem>
+              </HeaderNavItem>
             ))}
           </ul>
         </Nav>
@@ -65,9 +65,9 @@ class Navigation extends React.Component {
   }
 }
 
-Navigation.propTypes = {
+HeaderNav.propTypes = {
   items: PropTypes.arrayOf(PropTypes.object).isRequired
 }
 
-export default Navigation
+export default HeaderNav
 

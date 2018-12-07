@@ -25,16 +25,16 @@ const Anchor = styled.a`
   `}
 `
 
-const NavigationToggle = ({ isNavVisible, onClick }) => (
+const HeaderNavToggle = ({ isNavVisible, onClick }) => (
   <Anchor
     icon={isNavVisible ? hideMenuIcon : showMenuIcon}
     onClick={onClick}
   />
 )
 
-NavigationToggle.propTypes = {
+HeaderNavToggle.propTypes = {
   isNavVisible: PropTypes.bool.isRequired,
   onClick: PropTypes.func.isRequired
 }
 
-export default NavigationToggle
+export default HeaderNavToggle

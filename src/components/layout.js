@@ -6,6 +6,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import Normalize from './Normalize'
 import GlobalStyles from './GlobalStyles'
 import PageHeader from './PageHeader'
+import PageFooter from './PageFooter'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -49,6 +50,7 @@ const Layout = ({ children }) => (
         >
           {children}
         </div>
+        <PageFooter />
       </>
     )}
   />

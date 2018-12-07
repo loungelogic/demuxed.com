@@ -1,8 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link } from 'gatsby'
 
-import logoBlack from '../../images/logo-black.svg'
+import Link from '../Link'
 import { medLarge } from '../../styles/variables'
 import { media } from '../../styles/mixins'
 
@@ -11,7 +10,6 @@ const StyledLink = styled(Link)`
   height: 25px;
   margin: 1.6em 0 1em 1em;
   display: block;
-  background-image: url(${logoBlack});
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: 147px;
@@ -26,8 +24,8 @@ const StyledLink = styled(Link)`
   `}
 `
 
-const Logo = () => (
-  <StyledLink to='/' />
+const Logo = ({ className, url = '#' }) => (
+  <StyledLink className={className} to={url} />
 )
 
 export default Logo

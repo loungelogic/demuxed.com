@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { Link } from 'gatsby'
 
+import Link from '../../Link'
 import {
   brandBlue,
   brandPink,
@@ -63,7 +63,7 @@ const StyledLink = styled(Link)`
   }
 `
 
-const NavigationItem = ({ to, children }) => (
+const HeaderNavItem = ({ to, children }) => (
   <Li>
     <StyledLink to={to} activeClassName='selected'>
       {children}
@@ -71,10 +71,9 @@ const NavigationItem = ({ to, children }) => (
   </Li>
 )
 
-NavigationItem.propTypes = {
+HeaderNavItem.propTypes = {
   to: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired
 }
 
-export default NavigationItem
-
+export default HeaderNavItem
