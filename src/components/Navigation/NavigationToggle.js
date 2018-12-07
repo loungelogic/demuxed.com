@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import showMenuIcon from '../../images/menu.svg'
 import hideMenuIcon from '../../images/x.svg'
 import { medLarge } from '../../styles/variables'
-import { mq } from '../../styles/mixins'
+import { media } from '../../styles/mixins'
 
 const Anchor = styled.a`
   background-image: url(${props => props.icon});
@@ -19,16 +19,16 @@ const Anchor = styled.a`
   right: 0px;
   z-index: 100;
   
-  ${mq(medLarge)`
+  ${media(medLarge)`
     display: none;
   `}
 `
 
-const NavToggle = ({ isNavVisible, onClick }) => (
+const NavigationToggle = ({ isNavVisible, onClick }) => (
   <Anchor
     icon={isNavVisible ? hideMenuIcon : showMenuIcon}
     onClick={onClick}
   />
 )
 
-export default NavToggle
+export default NavigationToggle

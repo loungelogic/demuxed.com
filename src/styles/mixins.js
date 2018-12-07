@@ -16,7 +16,7 @@ export const clearfix = () => css`
   }
 `
 
-export const fontSize = size => {
+export const fontSize = (size) => {
   const fontSizeNum = parseInt(size)
   const baseFontSizeNum = parseInt(baseFontSize)
   const baseLineHeightNum = parseInt(baseLineHeight)
@@ -31,8 +31,8 @@ export const fontSize = size => {
   `
 }
 
-export const mq = (point, query1 = 'min', query2 = 'width') => (...content) => css`
-  @media (${query1}-${query2}: ${point / 16}em) {
+export const media = (point, feature = 'min-width') => (...content) => css`
+  @media (${feature}: ${point / 16}em) {
     ${css(...content)};
   }
 `

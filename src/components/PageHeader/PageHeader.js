@@ -1,10 +1,10 @@
 import React from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 import Logo from './Logo'
-import Navigation from './Navigation'
+import Navigation from '../Navigation'
 import { medLarge, large } from '../../styles/variables'
-import { clearfix, mq } from '../../styles/mixins'
+import { clearfix, media } from '../../styles/mixins'
 
 const navItems = [
   { caption: 'Home', path: '/' },
@@ -21,10 +21,10 @@ const Header = styled.header`
 
 const Container = styled.div`
   ${clearfix}
-  ${mq(medLarge)`
+  ${media(medLarge)`
     padding: 2em;
   `}
-  ${mq(large)`
+  ${media(large)`
     padding: 2.8em 2em;
   `}
 `

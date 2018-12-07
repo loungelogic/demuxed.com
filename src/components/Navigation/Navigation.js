@@ -1,11 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import NavToggle from './NavToggle'
+import NavigationToggle from './NavigationToggle'
 import NavigationItem from './NavigationItem'
-import menu from '../../images/menu.svg'
 import { brandPurpleLight, medLarge } from '../../styles/variables'
-import { mq } from '../../styles/mixins'
+import { media } from '../../styles/mixins'
 
 const Nav = styled.nav`
   display: ${props => props.isVisible ? 'block' : 'none'};
@@ -19,7 +18,7 @@ const Nav = styled.nav`
   padding: 2em 0;
   
 
-  ${mq(medLarge)`
+  ${media(medLarge)`
     display: inline-block;
     position: static;
     clear: right;
@@ -48,7 +47,7 @@ class Navigation extends React.Component {
 
     return (
       <>
-        <NavToggle
+        <NavigationToggle
           isNavVisible={isMobileNavVisible}
           onClick={this._toggleMobileNav}
         />

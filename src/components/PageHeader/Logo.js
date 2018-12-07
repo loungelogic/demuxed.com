@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 
 import logoBlack from '../../images/logo-black.svg'
 import { medLarge } from '../../styles/variables'
-import { mq } from '../../styles/mixins'
+import { media } from '../../styles/mixins'
 
 const StyledLink = styled(Link)`
   width: 147px;
@@ -20,7 +20,7 @@ const StyledLink = styled(Link)`
     opacity: 0.8;
   }
   
-  ${mq(medLarge)`
+  ${media(medLarge)`
     margin: 0;
     float: left;
   `}

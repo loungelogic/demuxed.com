@@ -89,7 +89,7 @@ const GlobalStyles = createGlobalStyle`
 
   html,
   body {
-    height: 100%;  
+    height: 100%;
   }
 `
 
