@@ -3,10 +3,6 @@
   "description": "Demuxed",
   "version": "0.0.1",
   "author": "MUX",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
   "private": true,
   "scripts": {
     "build": "gatsby build",
