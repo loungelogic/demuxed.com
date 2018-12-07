@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 
@@ -69,6 +70,11 @@ const NavigationItem = ({ to, children }) => (
     </StyledLink>
   </Li>
 )
+
+NavigationItem.propTypes = {
+  to: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired
+}
 
 export default NavigationItem
 

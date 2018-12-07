@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import NavigationToggle from './NavigationToggle'
@@ -16,7 +17,6 @@ const Nav = styled.nav`
   background-color: ${brandPurpleLight};
   text-align: center;
   padding: 2em 0;
-  
 
   ${media(medLarge)`
     display: inline-block;
@@ -63,6 +63,10 @@ class Navigation extends React.Component {
       </>
     )
   }
+}
+
+Navigation.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.object).isRequired
 }
 
 export default Navigation

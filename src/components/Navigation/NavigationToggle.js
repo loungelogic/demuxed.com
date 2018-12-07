@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import showMenuIcon from '../../images/menu.svg'
@@ -30,5 +31,10 @@ const NavigationToggle = ({ isNavVisible, onClick }) => (
     onClick={onClick}
   />
 )
+
+NavigationToggle.propTypes = {
+  isNavVisible: PropTypes.bool.isRequired,
+  onClick: PropTypes.func.isRequired
+}
 
 export default NavigationToggle
