@@ -70,11 +70,11 @@ const PageFooter = () => (
       <LogoContainer>
         <FooterLogo />
       </LogoContainer>
-      {navBlocks.map(({ title, links }) => (
-        <FooterNav>
+      {navBlocks.map(({ title, links }, i) => (
+        <FooterNav key={i}>
           <FooterNav.Title>{title}</FooterNav.Title>
-          {links.map(({ to, caption, icon }) => (
-            <FooterNav.Link to={to} icon={icon}>
+          {links.map(({ to, caption, icon }, i) => (
+            <FooterNav.Link key={i} to={to} icon={icon}>
               {caption}
             </FooterNav.Link>    
           ))}

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Link as GatsbyLink } from 'gatsby'
 
 const isExternalUrl = url => /^(?:(?:https?)|(?:mailto)):/.test(url)
@@ -19,6 +20,11 @@ const Link = ({ children, to, activeClassName, ...restProps }) => {
       </GatsbyLink>
     )
   }
+}
+
+Link.propTypes = {
+  children: PropTypes.node,
+  to: PropTypes.string
 }
 
 export default Link

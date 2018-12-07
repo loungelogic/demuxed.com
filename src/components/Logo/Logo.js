@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import Link from '../Link'
@@ -27,5 +28,10 @@ const StyledLink = styled(Link)`
 const Logo = ({ className, url = '#' }) => (
   <StyledLink className={className} to={url} />
 )
+
+Logo.propTypes = {
+  className: PropTypes.string,
+  url: PropTypes.string
+}
 
 export default Logo
