@@ -4,8 +4,8 @@ import styled from 'styled-components'
 
 import NavigationToggle from './NavigationToggle'
 import NavigationItem from './NavigationItem'
-import { brandPurpleLight, medLarge } from '../../styles/variables'
-import { media } from '../../styles/mixins'
+import { brandPurpleLight, medLarge } from '../../../styles/variables'
+import { media } from '../../../styles/mixins'
 
 const Nav = styled.nav`
   display: ${props => props.isVisible ? 'block' : 'none'};

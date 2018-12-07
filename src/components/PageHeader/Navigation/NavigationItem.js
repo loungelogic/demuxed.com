@@ -9,8 +9,8 @@ import {
   defaultSerif,
   large,
   medLarge
-} from '../../styles/variables'
-import { fontSize, media, transitionAll } from '../../styles/mixins'
+} from '../../../styles/variables'
+import { fontSize, media, transitionAll } from '../../../styles/mixins'
 
 const Li = styled.li`
   ${media(medLarge)`

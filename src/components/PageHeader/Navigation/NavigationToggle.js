@@ -2,10 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-import showMenuIcon from '../../images/menu.svg'
-import hideMenuIcon from '../../images/x.svg'
-import { medLarge } from '../../styles/variables'
-import { media } from '../../styles/mixins'
+import showMenuIcon from '../../../images/menu.svg'
+import hideMenuIcon from '../../../images/x.svg'
+import { medLarge } from '../../../styles/variables'
+import { media } from '../../../styles/mixins'
 
 const Anchor = styled.a`
   background-image: url(${props => props.icon});

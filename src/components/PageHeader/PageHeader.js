@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Logo from './Logo'
-import Navigation from '../Navigation'
+import Navigation from './Navigation'
 import { medLarge, large } from '../../styles/variables'
 import { clearfix, media } from '../../styles/mixins'
 
