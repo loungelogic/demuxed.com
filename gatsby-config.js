@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Demuxed, the conference for video engineers',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
