@@ -38,7 +38,7 @@ const Layout = ({ children }) => (
         </Helmet>
         <Normalize />
         <GlobalStyles />
-        <PageHeader siteTitle={data.site.siteMetadata.title} />
+        <PageHeader />
         <div
           style={{
             margin: '0 auto',
