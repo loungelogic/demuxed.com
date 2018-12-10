@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import MeetupPhotoLink from './MeetupPhotoLink'
@@ -76,5 +77,15 @@ const HeroMeetupCard = ({
     </RightContent>
   </ContentWrapper>
 )
+
+HeroMeetupCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  photoUrl: PropTypes.string.isRequired,
+  logoUrls: PropTypes.arrayOf(PropTypes.string),
+  className: PropTypes.string
+}
 
 export default HeroMeetupCard

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import Link from '../../Link'
@@ -29,5 +30,10 @@ const MeetupTitle = ({ children, url }) => (
     </StyledLink>
   </H3>
 )
+
+MeetupTitle.propTypes = {
+  children: PropTypes.node.isRequired,
+  url: PropTypes.string.isRequired
+}
 
 export default MeetupTitle

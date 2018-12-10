@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import Link from '../Link'
@@ -24,5 +25,11 @@ const HeroBanner = ({ className, imageUrl, url }) => (
     </Link>
   </ContentWrapper>
 )
+
+HeroBanner.propTypes = {
+  imageUrl: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+  className: PropTypes.string
+}
 
 export default HeroBanner

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import Link from '../../Link'
@@ -23,5 +24,10 @@ const MeetupPhotoLink = ({ url, photoUrl }) => (
     <Img src={photoUrl} />
   </StyledLink>
 )
+
+MeetupPhotoLink.propTypes = {
+  url: PropTypes.string.isRequired,
+  photoUrl: PropTypes.string.isRequired
+}
 
 export default MeetupPhotoLink
