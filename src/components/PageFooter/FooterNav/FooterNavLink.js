@@ -14,36 +14,32 @@ const StyledLink = styled(Link)`
   text-transform: none;
   color: #fff;
   color: ${lighten(0.66, brandPurple)};
-  
+
   &:hover {
     color: #fff;
   }
-`
 
-const StyledFooterNavItem = styled(FooterNavItem)`
-  a {
-    ${props => !!props.icon && css`
-      ${transitionAll};
-      background-image: url(${props.icon});
-      background-repeat: no-repeat;
-      background-position: left;
-      display: block;
-      height: 22px;
-      padding-left: 2.6em;
+  ${props => !!props.icon && css`
+    ${transitionAll};
+    background-image: url(${props.icon});
+    background-repeat: no-repeat;
+    background-position: left;
+    display: block;
+    height: 22px;
+    padding-left: 2.6em;
 
-      &:hover {
-        opacity: 0.5;
-      }
-    `}  
-  }
+    &:hover {
+      opacity: 0.5;
+    }
+  `}
 `
 
 const FooterNavLink = ({ children, to, icon }) => (
-  <StyledFooterNavItem icon={icon}>
-    <StyledLink to={to}>
+  <FooterNavItem>
+    <StyledLink icon={icon} to={to}>
       {children}
     </StyledLink>
-  </StyledFooterNavItem>
+  </FooterNavItem>
 )
 
 FooterNavLink.propTypes = {

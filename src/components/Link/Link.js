@@ -4,7 +4,7 @@ import { Link as GatsbyLink } from 'gatsby'
 
 const isExternalUrl = url => /^(?:(?:https?)|(?:mailto)):/.test(url)
 
-const Link = ({ children, to, activeClassName, ...restProps }) => {
+const Link = ({ children, to, activeClassName, icon, ...restProps }) => {
   const isExternal = isExternalUrl(to)
   
   if (isExternal) {
