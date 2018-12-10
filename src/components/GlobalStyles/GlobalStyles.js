@@ -4,7 +4,9 @@ import {
   brandGrey,
   defaultSerif,
   fontColor,
+  headlineFont,
   lineHeightRatio,
+  linkColor,
   selectionColor
 } from '../../styles/variables'
 
@@ -80,7 +82,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: ${defaultSerif};
     font-size: 100%;
     font-weight: 400;
-    line-height: ${lineHeightRatio}
+    line-height: ${lineHeightRatio};
     color: ${fontColor};
     background-color: ${brandGrey};
     -webkit-font-smoothing: antialiased;
@@ -90,6 +92,16 @@ const GlobalStyles = createGlobalStyle`
   html,
   body {
     height: 100%;
+  }
+
+  a {
+    color: ${linkColor};
+    text-decoration: none;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: ${headlineFont};
+    font-weight: 100;  
   }
 `
 
