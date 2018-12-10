@@ -4,31 +4,9 @@ import styled from 'styled-components'
 import Container from '../Container'
 import HeroBanner from './HeroBanner'
 import HeroMeetupCard from './HeroMeetupCard'
-import muxIcon from '../../images/mux.svg'
-import vimeoIcon from '../../images/vimeo.svg'
 import bannerImage from '../../images/hero-banner.jpg'
-import speakersPhoto from '../../images/speakers-photo2.jpg'
 import { brandBlue, large, medLarge, medium } from '../../styles/variables'
 import { fontSize, media } from '../../styles/mixins'
-
-const meetups = [
-  {
-    title: 'Demuxed meetup',
-    url: '#',
-    date: 'June 19, 2018',
-    location: 'San Francisco',
-    logoUrls: [muxIcon, vimeoIcon],
-    photoUrl: speakersPhoto
-  },
-  {
-    title: 'Demuxed meetup',
-    url: '#',
-    date: 'June 19, 2018',
-    location: 'San Francisco',
-    logoUrls: [muxIcon, vimeoIcon],
-    photoUrl: speakersPhoto
-  }
-]
 
 const Section = styled.section`
   background-color: ${brandBlue};
@@ -100,7 +78,7 @@ const RightContent = styled.div`
   `}
 `
 
-const Hero = () => (
+const Hero = ({ meetups }) => (
   <Section>
     <StyledContainer>
       <H1>The Community for Engineers Working with Video</H1>

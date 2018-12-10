@@ -62,18 +62,18 @@ const HeroMeetupCard = ({
   url,
   date,
   location,
-  logoUrls,
-  photoUrl
+  photo,
+  logos = []
 }) => (
   <ContentWrapper className={className}>
     <LeftContent>
       <MeetupTitle url={url}>{title}</MeetupTitle>
       <MeetupDate>{date}</MeetupDate>
       <MeetupLocation>{location}</MeetupLocation>
-      {logoUrls.map((logoUrl, i) => <MeetupLogo key={i} src={logoUrl} />)}
+      {logos.map((logo, i) => <MeetupLogo key={i} src={logo.publicURL} />)}
     </LeftContent>
     <RightContent>
-      <MeetupPhotoLink url={url} photoUrl={photoUrl} />
+      <MeetupPhotoLink url={url} photoUrl={photo.publicURL} />
     </RightContent>
   </ContentWrapper>
 )
@@ -83,8 +83,12 @@ HeroMeetupCard.propTypes = {
   url: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
-  photoUrl: PropTypes.string.isRequired,
-  logoUrls: PropTypes.arrayOf(PropTypes.string),
+  photo: PropTypes.shape({
+    publicURL: PropTypes.string.isRequired
+  }).isRequired,
+  logos: PropTypes.arrayOf(PropTypes.shape({
+    publicURL: PropTypes.string.isRequired
+  })),
   className: PropTypes.string
 }
 

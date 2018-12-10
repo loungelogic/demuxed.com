@@ -1,2 +1,2 @@
-import Hero from './Hero'
-export default Hero
+import HeroContainer from './HeroContainer'
+export default HeroContainer
