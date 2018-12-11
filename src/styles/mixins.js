@@ -22,7 +22,7 @@ export const fontSize = (size) => {
   const baseLineHeightNum = parseInt(baseLineHeight)
 
   return css`
-    font-size: ${fontSizeNum};
+    font-size: ${fontSizeNum}px;
     font-size: ${fontSizeNum / baseFontSizeNum}rem;
     line-height: ${
       Math.ceil(fontSizeNum / baseLineHeightNum) *
