@@ -13,10 +13,6 @@ const Section = styled.section`
   text-align: center;
 `
 
-const StyledContainer = styled(Container)`
-  padding: 3em 2em;
-`
-
 const H1 = styled.h1`
   ${fontSize('20px')};
   color: #fff;
@@ -80,7 +76,7 @@ const RightContent = styled.div`
 
 const Hero = ({ meetups }) => (
   <Section>
-    <StyledContainer>
+    <Container>
       <H1>The Community for Engineers Working with Video</H1>
       <ContentWrapper>
         <LeftContent>
@@ -92,7 +88,7 @@ const Hero = ({ meetups }) => (
           <StyledBanner url='#' imageUrl={bannerImage} />
         </RightContent>
       </ContentWrapper>
-    </StyledContainer>
+    </Container>
   </Section>
 )
 

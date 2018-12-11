@@ -22,9 +22,12 @@ const Header = styled.header`
 
 const StyledContainer = styled(Container)`
   ${clearfix}
+  padding: 0;
+
   ${media(medLarge)`
     padding: 2em;
   `}
+
   ${media(large)`
     padding: 2.8em 2em;
   `}

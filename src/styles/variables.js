@@ -11,12 +11,14 @@ export const selectionColor = '#b4d5ff'
 //Fonts
 export const baseFontSize = '15px'
 export const baseLineHeight = '23px'
+export const buttonFont = '"ocr-a-std", monospace'
 export const defaultSerif = '"ocr-a-std", monospace'
 export const fontColor = '#2f1c46'
 export const headlineFont = '"ocr-a-std", monospace'
 export const lineHeightRatio = parseInt(baseLineHeight) / parseInt(baseFontSize)
 
 // Media breakpoints
+export const small = 600
 export const medium = 760
 export const medLarge = 960
 export const large = 1100

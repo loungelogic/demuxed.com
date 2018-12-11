@@ -6,6 +6,7 @@ const Container = styled.div`
   max-width: ${maxWidth};
   margin: 0 auto;
   position: relative;
+  padding: 3em 2em;
 `
 
 export default Container
