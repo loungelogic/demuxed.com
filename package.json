@@ -31,6 +31,7 @@
     "@babel/core": "^7.2.0",
     "@storybook/addon-actions": "^4.0.12",
     "@storybook/addon-links": "^4.0.12",
+    "@storybook/addon-viewport": "^4.0.12",
     "@storybook/addons": "^4.0.12",
     "@storybook/react": "^4.0.12",
     "babel-loader": "^8.0.4",
