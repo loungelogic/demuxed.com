@@ -27,8 +27,10 @@ const H1 = styled.h1`
   `}
 `
 
-const SectionHeading = ({ children }) => (
-  <H1>{children}</H1>
+const SectionHeading = ({ className, children }) => (
+  <H1 className={className}>
+    {children}
+  </H1>
 )
 
 SectionHeading.propTypes = {
