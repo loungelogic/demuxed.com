@@ -4,6 +4,7 @@ import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 import News from '../components/News'
 import Events from '../components/Events'
+import Tweets from '../components/Tweets'
 import FeaturedVideo from '../components/FeaturedVideo'
 import Jobs from '../components/Jobs'
 
@@ -12,6 +13,7 @@ const IndexPage = () => (
     <Hero />
     <News />
     <Events />
+    <Tweets />
     <FeaturedVideo />
     <Jobs />
   </Layout>
