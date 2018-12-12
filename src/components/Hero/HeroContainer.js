@@ -2,6 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
  
 import Hero from './Hero'
+import { extractNodes } from '../../helpers/data'
 
 const HeroContainer = () => (
   <StaticQuery
@@ -26,7 +27,7 @@ const HeroContainer = () => (
       }
     `}
     render={data =>
-      <Hero meetups={data.allMeetupsJson.edges.map(edge => edge.node)} />
+      <Hero meetups={extractNodes(data.allMeetupsJson)} />
     }
   />
 )

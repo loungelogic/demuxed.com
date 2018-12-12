@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import Container from '../Container'
-import NewsCard from './NewsCard'
 import SectionHeading from '../SectionHeading'
+import SynopsisCard from '../SynopsisCard'
 
 const NewsList = styled.ul`
   text-align: center;
@@ -15,7 +15,15 @@ const News = ({ news = [] }) => (
     <Container>
       <SectionHeading>In the news</SectionHeading>
       <NewsList>
-        {news.map((item, i) => <NewsCard key={i} {...item} />)}
+        {news.map((item, i) => (
+          <SynopsisCard
+            key={i}
+            heading={item.title}
+            subHeading={item.date}
+            text={item.description}
+            url={item.url}
+          />
+        ))}
       </NewsList>
     </Container>
   </section>

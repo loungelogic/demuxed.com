@@ -1,18 +1,18 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 
-import News from './News'
+import Jobs from './Jobs'
 import { extractNodes } from '../../helpers/data'
 
-const NewsContainer = () => (
+const JobsContainer = () => (
   <StaticQuery
     query={graphql`
       query {
-        allNewsJson {
+        allJobsJson {
           edges {
             node {
-              title
-              date
+              position
+              company
               description
               url
             }
@@ -21,8 +21,8 @@ const NewsContainer = () => (
       }
     `}
     render={data =>
-      <News news={extractNodes(data.allNewsJson)} />
+      <Jobs jobs={extractNodes(data.allJobsJson)} />
     }
   />
 )
-export default NewsContainer
+export default JobsContainer

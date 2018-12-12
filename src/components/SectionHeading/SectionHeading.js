@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+
 import { media, fontSize } from '../../styles/mixins'
 import { brandPink, medium } from '../../styles/variables'
 

@@ -39,13 +39,13 @@ const StyledListItem = styled(ListItem)`
   `}
 `
 
-const Title = styled.h3`
+const Heading = styled.h3`
   ${fontSize('16px')};
   line-height: 1.4em;
   margin-bottom: 0.5em;
 `
 
-const Date = styled.h4`
+const SubHeading = styled.h4`
   ${fontSize('14px')};
   line-height: 1.6em;
   margin-bottom: 0.8em;
@@ -54,7 +54,7 @@ const Date = styled.h4`
   text-transform: uppercase;
 `
 
-const Description = styled(Paragraph)`
+const Text = styled(Paragraph)`
   line-height: 1.6em;
   margin-bottom: 2em;
 `
@@ -63,22 +63,22 @@ const StyledButton = styled(Button)`
   padding: 0.6em 3em;
 `
 
-const NewsCard = ({ title, date, description, url }) => (
+const SynopsisCard = ({ heading, subHeading, text, url }) => (
   <StyledListItem>
-    <Title>{title}</Title>
-    <Date>{date}</Date>
-    <Description>{description}</Description>
+    <Heading>{heading}</Heading>
+    <SubHeading>{subHeading}</SubHeading>
+    <Text>{text}</Text>
     <StyledButton as={Link} to={url}>
       Learn more
     </StyledButton>
   </StyledListItem>
 )
 
-NewsCard.propTypes = {
-  title: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+SynopsisCard.propTypes = {
+  heading: PropTypes.string.isRequired,
+  subHeading: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired
 }
 
-export default NewsCard
+export default SynopsisCard

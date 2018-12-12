@@ -2,6 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Events from './Events'
+import { extractNodes } from '../../helpers/data'
 
 const EventsContainer = () => (
   <StaticQuery
@@ -23,7 +24,7 @@ const EventsContainer = () => (
       }
     `}
     render={data =>
-      <Events events={data.allEventsJson.edges.map(edge => edge.node)} />
+      <Events events={extractNodes(data.allEventsJson)} />
     }
   />
 )

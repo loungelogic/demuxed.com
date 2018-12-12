@@ -5,6 +5,7 @@ import Hero from '../components/Hero'
 import News from '../components/News'
 import Events from '../components/Events'
 import FeaturedVideo from '../components/FeaturedVideo'
+import Jobs from '../components/Jobs'
 
 const IndexPage = () => (
   <Layout>
@@ -12,6 +13,7 @@ const IndexPage = () => (
     <News />
     <Events />
     <FeaturedVideo />
+    <Jobs />
   </Layout>
 )
 
