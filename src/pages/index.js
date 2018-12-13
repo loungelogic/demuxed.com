@@ -7,6 +7,7 @@ import Events from '../components/Events'
 import Tweets from '../components/Tweets'
 import FeaturedVideo from '../components/FeaturedVideo'
 import Jobs from '../components/Jobs'
+import InvolvementOptions from '../components/InvolvementOptions'
 
 const IndexPage = () => (
   <Layout>
@@ -16,6 +17,7 @@ const IndexPage = () => (
     <Tweets />
     <FeaturedVideo />
     <Jobs />
+    <InvolvementOptions />
   </Layout>
 )
 
