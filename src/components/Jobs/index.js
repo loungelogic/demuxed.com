@@ -1,2 +1,3 @@
-import JobsContainer from './JobsContainer'
-export default JobsContainer
+import JobsContainer from './JobsContainer';
+
+export default JobsContainer;

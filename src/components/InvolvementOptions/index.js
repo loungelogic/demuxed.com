@@ -1,2 +1,3 @@
-import InvolvementOptions from './InvolvementOptions'
-export default InvolvementOptions
+import InvolvementOptions from './InvolvementOptions';
+
+export default InvolvementOptions;

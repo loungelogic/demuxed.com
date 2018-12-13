@@ -1,2 +1,3 @@
-import TweetsContainer from './TweetsContainer'
-export default TweetsContainer
+import TweetsContainer from './TweetsContainer';
+
+export default TweetsContainer;

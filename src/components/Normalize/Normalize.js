@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components';
 
 const Normalize = createGlobalStyle`
   /*! normalize.css v2.0.1 | MIT License | git.io/normalize */
@@ -368,6 +368,6 @@ const Normalize = createGlobalStyle`
     border-collapse: collapse;
     border-spacing: 0;
   }
-`
+`;
 
-export default Normalize
+export default Normalize;

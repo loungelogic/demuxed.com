@@ -1,2 +1,3 @@
-import NewsContainer from './NewsContainer'
-export default NewsContainer
+import NewsContainer from './NewsContainer';
+
+export default NewsContainer;

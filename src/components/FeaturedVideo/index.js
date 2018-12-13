@@ -1,2 +1,3 @@
-import FeaturedVideoContainer from './FeaturedVideoContainer'
-export default FeaturedVideoContainer
+import FeaturedVideoContainer from './FeaturedVideoContainer';
+
+export default FeaturedVideoContainer;

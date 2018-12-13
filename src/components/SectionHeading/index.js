@@ -1,2 +1,3 @@
-import SectionHeading from './SectionHeading'
-export default SectionHeading
+import SectionHeading from './SectionHeading';
+
+export default SectionHeading;

@@ -8,11 +8,12 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "npm run develop",
-    "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "now-build": "npm run build"
+    "now-build": "npm run build",
+    "lint:js": "eslint --ext .js --ext .jsx src",
+    "lint:css": "stylelint './src/**/*.jsx'"
   },
   "dependencies": {
     "gatsby": "^2.0.53",
@@ -38,7 +39,16 @@
     "@storybook/addon-viewport": "^4.0.12",
     "@storybook/addons": "^4.0.12",
     "@storybook/react": "^4.0.12",
+    "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
-    "prettier": "^1.15.2"
+    "eslint": "^5.10.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-jsx-a11y": "6.1.1",
+    "eslint-plugin-react": "7.11.0",
+    "stylelint": "^9.9.0",
+    "stylelint-config-recommended": "^2.1.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.5.1"
   }
 }

@@ -1,2 +1,3 @@
-import GlobalStyles from './GlobalStyles'
-export default GlobalStyles
+import GlobalStyles from './GlobalStyles';
+
+export default GlobalStyles;

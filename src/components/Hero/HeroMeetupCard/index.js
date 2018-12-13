@@ -1,2 +1,3 @@
-import HeroMeetupCard from './HeroMeetupCard'
-export default HeroMeetupCard
+import HeroMeetupCard from './HeroMeetupCard';
+
+export default HeroMeetupCard;

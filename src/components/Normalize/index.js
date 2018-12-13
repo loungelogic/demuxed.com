@@ -1,2 +1,3 @@
-import Normalize from './Normalize'
-export default Normalize
+import Normalize from './Normalize';
+
+export default Normalize;

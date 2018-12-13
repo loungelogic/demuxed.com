@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components';
 
 import {
   brandGrey,
@@ -7,8 +7,8 @@ import {
   headlineFont,
   lineHeightRatio,
   linkColor,
-  selectionColor
-} from '../../styles/variables'
+  selectionColor,
+} from '../../styles/variables';
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -103,6 +103,6 @@ const GlobalStyles = createGlobalStyle`
     font-family: ${headlineFont};
     font-weight: 100;  
   }
-`
+`;
 
-export default GlobalStyles
+export default GlobalStyles;
