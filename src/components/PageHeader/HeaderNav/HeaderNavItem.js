@@ -3,13 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import Link from '../../Link'
-import {
-  brandBlue,
-  brandPink,
-  defaultSerif,
-  large,
-  medLarge
-} from '../../../styles/variables'
+import { defaultSerif, large, medLarge } from '../../../styles/variables'
 import { fontSize, media, transitionAll } from '../../../styles/mixins'
 
 const Li = styled.li`
@@ -46,7 +40,7 @@ const StyledLink = styled(Link)`
   ${media(medLarge)`
     ${fontSize('12px')};
     padding: 0;
-    color: ${brandBlue};
+    color: ${props => props.theme.medLargeColor};
   `}
 
   &:hover,
@@ -58,7 +52,7 @@ const StyledLink = styled(Link)`
       opacity: 1;
       text-decoration: none;
       background: 0;
-      color: ${brandPink};
+      color: ${props => props.theme.medLargeHoverColor};
     `}
   }
 `

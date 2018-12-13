@@ -2,6 +2,15 @@ import { css } from 'styled-components'
 
 import { baseFontSize, baseLineHeight, transitionSpeed } from './variables'
 
+export const animateIn = () => css`
+  animation: fadein .5s ease-in;
+
+  @keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+`
+
 export const clearfix = () => css`
   zoom: 1;
 

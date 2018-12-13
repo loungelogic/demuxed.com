@@ -10,7 +10,7 @@ import Jobs from '../components/Jobs'
 import InvolvementOptions from '../components/InvolvementOptions'
 
 const IndexPage = () => (
-  <Layout>
+  <Layout headerProps={{ dark: true }}>
     <Hero />
     <News />
     <Events />

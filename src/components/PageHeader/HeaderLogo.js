@@ -2,10 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Logo from '../Logo'
-import logoBlack from '../../images/logo-black.svg'
 
 const StyledLogo = styled(Logo)`
-  background-image: url(${logoBlack});
+  background-image: url(${props => props.theme.logoIcon});
 `
 
 const HeaderLogo = () => (

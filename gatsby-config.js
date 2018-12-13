@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Demuxed, the conference for video engineers',
+    description: 'Demuxed, the conference for video engineers.'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -24,13 +25,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'Demuxed, the conference for video engineers',
+        short_name: 'Demuxed',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#efeaf3',
+        theme_color: '#362b5c',
         display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+        icon: 'src/images/favicon.png', // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
