@@ -2,22 +2,22 @@ import React from 'react';
 
 import Layout from '../components/Layout';
 import Hero from '../components/Hero';
-import News from '../components/News';
-import Events from '../components/Events';
-import Tweets from '../components/Tweets';
+import NewsSection from '../components/NewsSection';
+import HomePageEventsSection from '../components/HomePageEventsSection';
+import TweetsSection from '../components/TweetsSection';
 import FeaturedVideo from '../components/FeaturedVideo';
-import Jobs from '../components/Jobs';
-import InvolvementOptions from '../components/InvolvementOptions';
+import HomePageJobsSection from '../components/HomePageJobsSection';
+import InvolvementSection from '../components/InvolvementSection';
 
 const IndexPage = () => (
   <Layout headerProps={{ dark: true }}>
     <Hero />
-    <News />
-    <Events />
-    <Tweets />
+    <NewsSection />
+    <HomePageEventsSection />
+    <TweetsSection />
     <FeaturedVideo />
-    <Jobs />
-    <InvolvementOptions />
+    <HomePageJobsSection />
+    <InvolvementSection />
   </Layout>
 );
 

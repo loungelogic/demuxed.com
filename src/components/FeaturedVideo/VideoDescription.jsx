@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import Button from '../Button';
 import Link from '../Link';
 import Paragraph from '../Paragraph';
-import SectionHeading from '../SectionHeading';
+import Section from '../Section';
 import { media } from '../../styles/mixins';
 import {
   brandPink,
@@ -31,7 +31,7 @@ const VideoDescriptionWrapper = styled.div`
   `}
 `;
 
-const StyledSectionHeading = styled(SectionHeading)`
+const StyledSectionHeading = styled(Section.Heading)`
   ${media(xlLarge)`
     text-align: left;
 

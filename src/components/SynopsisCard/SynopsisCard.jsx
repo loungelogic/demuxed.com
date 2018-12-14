@@ -5,7 +5,7 @@ import { lighten } from 'polished';
 
 import Button from '../Button';
 import Link from '../Link';
-import ListItem from '../ListItem';
+import List from '../List';
 import Paragraph from '../Paragraph';
 import {
   brandPink,
@@ -15,7 +15,7 @@ import {
 } from '../../styles/variables';
 import { fontSize, media } from '../../styles/mixins';
 
-const StyledListItem = styled(ListItem)`
+const StyledListItem = styled(List.Item)`
   list-style-type: none;
   text-align: left;
   margin-bottom: 2em;

@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 import Button from '../Button';
-import ListItem from '../ListItem';
+import List from '../List';
 import { fontSize, media } from '../../styles/mixins';
 import { defaultSerif, large, medium } from '../../styles/variables';
 
-const InvolvementOptionCard = styled(ListItem)`
+const InvolvementOptionCard = styled(List.Item)`
   list-style-type: none;
   background-color: #fff; 
   padding: 2em 1em;
