@@ -1,14 +1,14 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 
-import HomePageJobsSection from './HomePageJobsSection';
+import JobsSection from './JobsSection';
 import { extractNodes } from '../../helpers/data';
 
-const HomePageJobsSectionContainer = () => (
+const JobsSectionContainer = () => (
   <StaticQuery
     query={graphql`
       query {
-        allJobsJson (limit: 4) {
+        allJobsJson {
           edges {
             node {
               position
@@ -20,8 +20,8 @@ const HomePageJobsSectionContainer = () => (
         }
       }
     `}
-    render={data => <HomePageJobsSection jobs={extractNodes(data.allJobsJson)} />}
+    render={data => <JobsSection jobs={extractNodes(data.allJobsJson)} />}
   />
 );
 
-export default HomePageJobsSectionContainer;
+export default JobsSectionContainer;
