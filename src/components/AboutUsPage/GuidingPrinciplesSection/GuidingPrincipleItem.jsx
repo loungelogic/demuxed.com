@@ -44,10 +44,12 @@ const Title = styled.h3`
   `}
 `;
 
-const Text = styled.p`
-  ${media(medium)`
-    line-height: 1.7em;
-  `}
+const Text = styled.div`
+  p {
+    ${media(medium)`
+      line-height: 1.7em;
+    `}
+  }
 `;
 
 const GuidingPrincipleItem = ({ frontmatter, html }) => (
