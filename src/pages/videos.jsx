@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Layout from '../components/Layout';
-import VideosSection from '../components/VideosSection';
+import Layout from '../components/common/Layout';
+import VideosSection from '../components/VideosPage/VideosSection';
 
 const VideosPage = () => (
   <Layout>

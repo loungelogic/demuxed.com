@@ -1,7 +1,7 @@
 import React from 'react';
 
-import EventsSection from '../components/EventsSection';
-import Layout from '../components/Layout';
+import EventsSection from '../components/EventsPage/EventsSection';
+import Layout from '../components/common/Layout';
 
 const EventsPage = () => (
   <Layout>

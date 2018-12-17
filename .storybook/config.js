@@ -2,8 +2,8 @@ import React from 'react'
 import { addDecorator, configure } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
-import Normalize from '../src/components/Normalize'
-import GlobalStyles from '../src/components/GlobalStyles'
+import Normalize from '../src/components/common/Normalize'
+import GlobalStyles from '../src/components/common/GlobalStyles'
 
 // Gatsby's Link overrides:
 // Gatsby defines a global called ___loader to prevent its method calls

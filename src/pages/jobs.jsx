@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Layout from '../components/Layout';
-import JobsSection from '../components/JobsSection';
+import Layout from '../components/common/Layout';
+import JobsSection from '../components/JobsPage/JobsSection';
 
 const JobsPage = () => (
   <Layout>
