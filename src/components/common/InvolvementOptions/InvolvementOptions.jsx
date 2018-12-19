@@ -29,7 +29,7 @@ const InvolvementOptions = () => (
       <IOCard.Heading>
         Join the Demuxed Slack channel!
       </IOCard.Heading>
-      <IOCard.Button as={Link} to="#">
+      <IOCard.Button as={Link} to="https://video-dev.slack.com/messages/demuxed/">
         Join
       </IOCard.Button>
     </IOCard>
@@ -42,7 +42,7 @@ const InvolvementOptions = () => (
       <IOCard.Heading>
         Subscribe to the Demuxed podcast
       </IOCard.Heading>
-      <IOCard.Button as={Link} to="#">
+      <IOCard.Button as={Link} to="https://itunes.apple.com/us/podcast/demuxed/id1156304199?mt=2">
         Subscribe
       </IOCard.Button>
     </IOCard>
