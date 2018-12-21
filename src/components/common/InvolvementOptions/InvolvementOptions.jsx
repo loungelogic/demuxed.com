@@ -1,7 +1,7 @@
 import React from 'react';
 
 import IOCard from './InvolvementOptionCard';
-import IOSubForm from './InvolvementOptionSubscribeForm';
+import MailingListSubscriptionForm from './MailingListSubscriptionForm';
 import Link from '../Link';
 import List from '../List';
 import podcastIcon from '../../../images/podcast-illustration.svg';
@@ -18,7 +18,7 @@ const InvolvementOptions = () => (
       <IOCard.Heading>
         Subscribe to the Demuxed mailing list
       </IOCard.Heading>
-      <IOSubForm />
+      <MailingListSubscriptionForm />
     </IOCard>
 
     <IOCard>
