@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import Button from '../Button';
 import Link from '../Link';
 import List from '../List';
+import defaultEventImage from '../../../images/event.jpg';
 import { fontSize, media } from '../../../styles/mixins';
 import {
   brandPink,
@@ -67,16 +68,18 @@ const StyledButton = styled(Button)`
 `;
 
 const EventCard = ({
-  title, location, date, url, photo,
+  location, startDate, type, url,
 }) => (
   <StyledListItem>
     <Link to={url}>
-      <img src={photo.publicURL} alt="" />
+      <img src={defaultEventImage} alt="" />
     </Link>
     <EventDetails>
-      <EventTitle>{title}</EventTitle>
-      <EventLocation>{location}</EventLocation>
-      <EventDate>{date}</EventDate>
+      <EventTitle>{type}</EventTitle>
+      {location && location[0] ? (
+        <EventLocation>{location[0].city}</EventLocation>
+      ) : null}
+      <EventDate>{startDate}</EventDate>
       <StyledButton as={Link} to={url}>
         Join
       </StyledButton>
@@ -85,13 +88,12 @@ const EventCard = ({
 );
 
 EventCard.propTypes = {
-  title: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
+  location: PropTypes.arrayOf(PropTypes.shape({
+    city: PropTypes.string.isRequired,
+  })).isRequired,
+  startDate: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
-  photo: PropTypes.shape({
-    publicURL: PropTypes.string.isRequired,
-  }).isRequired,
 };
 
 export default EventCard;

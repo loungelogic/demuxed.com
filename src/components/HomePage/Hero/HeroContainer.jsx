@@ -2,32 +2,34 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 
 import Hero from './Hero';
-import { extractNodes } from '../../../helpers/data';
+import { flattenAirtableNode, extractNodes } from '../../../helpers/data';
 
 const HeroContainer = () => (
   <StaticQuery
     query={graphql`
       query {
-        allMeetupsJson {
+        allAirtable (filter: { table: { eq: "Events" } }, limit: 2) {
           edges {
             node {
-              title
-              url
-              date
-              location
-              logos {
-                publicURL
-              }
-              photo {
-                publicURL
+              data {
+                startDate: Time_Start(formatString: "D.M.YYYY")
+                type: Type
+                url: Event_URL
+                location: Location {
+                  data {
+                    city: City
+                  }
+                }
               }
             }
           }
         }
       }
     `}
-    render={data => <Hero meetups={extractNodes(data.allMeetupsJson)} />
-    }
+    render={(data) => {
+      const events = extractNodes(data.allAirtable).map(flattenAirtableNode);
+      return <Hero events={events} />;
+    }}
   />
 );
 

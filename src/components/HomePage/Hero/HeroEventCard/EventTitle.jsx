@@ -23,7 +23,7 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const MeetupTitle = ({ children, url }) => (
+const EventTitle = ({ children, url }) => (
   <H3>
     <StyledLink to={url}>
       {children}
@@ -31,9 +31,9 @@ const MeetupTitle = ({ children, url }) => (
   </H3>
 );
 
-MeetupTitle.propTypes = {
+EventTitle.propTypes = {
   children: PropTypes.node.isRequired,
   url: PropTypes.string.isRequired,
 };
 
-export default MeetupTitle;
+export default EventTitle;

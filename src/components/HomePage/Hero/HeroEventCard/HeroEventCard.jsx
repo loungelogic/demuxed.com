@@ -3,8 +3,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import MeetupPhotoLink from './MeetupPhotoLink';
-import MeetupTitle from './MeetupTitle';
+import EventPhotoLink from './EventPhotoLink';
+import EventTitle from './EventTitle';
+import defaultEventImage from '../../../../images/event.jpg';
 import { fontSize, media } from '../../../../styles/mixins';
 import { brandPink, brandTextGrey, xlLarge } from '../../../../styles/variables';
 
@@ -42,60 +43,58 @@ const RightContent = styled.div`
   `}
 `;
 
-const MeetupDate = styled.h4`
+const EventDate = styled.h4`
   ${fontSize('12px')};
   color: ${brandPink};
 `;
 
-const MeetupLocation = styled.p`
+const EventLocation = styled.p`
   ${fontSize('12px')};
   color: ${brandTextGrey};
   margin-bottom: 1em;
 `;
 
-const MeetupLogo = styled.img`
+const EventLogo = styled.img`
   max-width: 60px;
 `;
 
-const HeroMeetupCard = ({
+const HeroEventCard = ({
   className,
-  title,
-  url,
-  date,
   location,
-  photo,
+  startDate,
+  type,
+  url,
   logos,
 }) => (
   <ContentWrapper className={className}>
     <LeftContent>
-      <MeetupTitle url={url}>{title}</MeetupTitle>
-      <MeetupDate>{date}</MeetupDate>
-      <MeetupLocation>{location}</MeetupLocation>
-      {logos.map((logo, i) => <MeetupLogo key={i} src={logo.publicURL} />)}
+      <EventTitle url={url}>{type}</EventTitle>
+      <EventDate>{startDate}</EventDate>
+      {location && location[0] ? (
+        <EventLocation>{location[0].city}</EventLocation>
+      ) : null}
+      {logos.map((logo, i) => <EventLogo key={i} src={logo} />)}
     </LeftContent>
     <RightContent>
-      <MeetupPhotoLink url={url} photoUrl={photo.publicURL} />
+      <EventPhotoLink url={url} photoUrl={defaultEventImage} />
     </RightContent>
   </ContentWrapper>
 );
 
-HeroMeetupCard.defaultProps = {
+HeroEventCard.defaultProps = {
   className: '',
   logos: [],
 };
 
-HeroMeetupCard.propTypes = {
-  title: PropTypes.string.isRequired,
+HeroEventCard.propTypes = {
+  location: PropTypes.arrayOf(PropTypes.shape({
+    city: PropTypes.string.isRequired,
+  })).isRequired,
+  startDate: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
-  photo: PropTypes.shape({
-    publicURL: PropTypes.string.isRequired,
-  }).isRequired,
-  logos: PropTypes.arrayOf(PropTypes.shape({
-    publicURL: PropTypes.string.isRequired,
-  })),
+  logos: PropTypes.arrayOf(PropTypes.string),
   className: PropTypes.string,
 };
 
-export default HeroMeetupCard;
+export default HeroEventCard;

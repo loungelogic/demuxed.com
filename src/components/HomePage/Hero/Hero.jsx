@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import Container from '../../common/Container';
 import HeroBanner from './HeroBanner';
-import HeroMeetupCard from './HeroMeetupCard';
+import HeroEventCard from './HeroEventCard';
 import bannerImage from '../../../images/hero-banner.jpg';
 import {
   brandBlue, large, medLarge, medium,
@@ -47,7 +47,7 @@ const LeftContent = styled.div`
   `}
 `;
 
-const StyledMeetupCard = styled(HeroMeetupCard)`
+const StyledEventCard = styled(HeroEventCard)`
   list-style-type: none;
   margin-bottom: 1em;
 
@@ -77,14 +77,16 @@ const StyledBanner = styled(HeroBanner)`
   margin-bottom: 1em;
 `;
 
-const Hero = ({ meetups }) => (
+const Hero = ({ events }) => (
   <Section>
     <Container>
       <H1>The Community for Engineers Working with Video</H1>
       <ContentWrapper>
-        <LeftContent>
-          {meetups.map((meetup, i) => <StyledMeetupCard key={i} {...meetup} />)}
-        </LeftContent>
+        {events.length ? (
+          <LeftContent>
+            {events.map((event, i) => <StyledEventCard key={i} {...event} />)}
+          </LeftContent>
+        ) : null}
         <RightContent>
           <StyledBanner url="#" imageUrl={bannerImage} />
         </RightContent>

@@ -19,15 +19,15 @@ const Img = styled.img`
   bottom: 0;
 `;
 
-const MeetupPhotoLink = ({ url, photoUrl }) => (
+const EventPhotoLink = ({ url, photoUrl }) => (
   <StyledLink to={url}>
     <Img src={photoUrl} />
   </StyledLink>
 );
 
-MeetupPhotoLink.propTypes = {
+EventPhotoLink.propTypes = {
   url: PropTypes.string.isRequired,
   photoUrl: PropTypes.string.isRequired,
 };
 
-export default MeetupPhotoLink;
+export default EventPhotoLink;

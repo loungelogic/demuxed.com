@@ -36,6 +36,25 @@ module.exports = {
     },
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-remark`,
+    {
+      // Requires GATSBY_AIRTABLE_API_KEY env variable to be set
+      resolve: `gatsby-source-airtable`,
+      options: {
+        tables: [
+          {
+            baseId: `appNzvLTUWY5c8z6W`,
+            tableName: `Events`,
+            tableView: `All Upcoming`,
+            tableLinks: [`Location`],
+          },
+          {
+            baseId: `appNzvLTUWY5c8z6W`,
+            tableName: `Locations`,
+            tableView: `All`,
+          },
+        ],
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',

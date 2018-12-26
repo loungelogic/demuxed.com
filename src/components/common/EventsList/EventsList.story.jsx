@@ -3,50 +3,43 @@ import { storiesOf } from '@storybook/react';
 import { withViewport } from '@storybook/addon-viewport';
 
 import EventsList from './EventsList';
-import eventPhoto from '../../../images/event.jpg';
 
 const events = [
   {
-    title: 'Demuxed meetup',
-    location: 'San Francisco',
-    date: '30.1.17',
+    type: 'Demuxed meetup',
+    location: [{ city: 'San Francisco' }],
+    startDate: '30.1.17',
     url: '#',
-    photo: { publicURL: eventPhoto },
   },
   {
-    title: 'Demuxed meetup',
-    location: 'San Francisco',
-    date: '30.1.17',
+    type: 'Demuxed meetup',
+    location: [{ city: 'San Francisco' }],
+    startDate: '30.1.17',
     url: '#',
-    photo: { publicURL: eventPhoto },
   },
   {
-    title: 'Demuxed meetup',
-    location: 'San Francisco',
-    date: '30.1.17',
+    type: 'Demuxed meetup',
+    location: [{ city: 'San Francisco' }],
+    startDate: '30.1.17',
     url: '#',
-    photo: { publicURL: eventPhoto },
   },
   {
-    title: 'Demuxed meetup',
-    location: 'San Francisco',
-    date: '30.1.17',
+    type: 'Demuxed meetup',
+    location: [{ city: 'San Francisco' }],
+    startDate: '30.1.17',
     url: '#',
-    photo: { publicURL: eventPhoto },
   },
   {
-    title: 'Demuxed meetup',
-    location: 'San Francisco',
-    date: '30.1.17',
+    type: 'Demuxed meetup',
+    location: [{ city: 'San Francisco' }],
+    startDate: '30.1.17',
     url: '#',
-    photo: { publicURL: eventPhoto },
   },
   {
-    title: 'Demuxed meetup',
-    location: 'San Francisco',
-    date: '30.1.17',
+    type: 'Demuxed meetup',
+    location: [{ city: 'San Francisco' }],
+    startDate: '30.1.17',
     url: '#',
-    photo: { publicURL: eventPhoto },
   },
 ];
 

@@ -2,28 +2,34 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 
 import EventsSection from './EventsSection';
-import { extractNodes } from '../../../helpers/data';
+import { flattenAirtableNode, extractNodes } from '../../../helpers/data';
 
 const EventsSectionContainer = () => (
   <StaticQuery
     query={graphql`
       query {
-        allEventsJson {
+        allAirtable (filter: { table: { eq: "Events" } }) {
           edges {
             node {
-              title
-              location
-              date
-              url
-              photo {
-                publicURL
+              data {
+                startDate: Time_Start(formatString: "D.M.YYYY")
+                type: Type
+                url: Event_URL
+                location: Location {
+                  data {
+                    city: City
+                  }
+                }
               }
             }
           }
         }
       }
     `}
-    render={data => <EventsSection events={extractNodes(data.allEventsJson)} />}
+    render={(data) => {
+      const events = extractNodes(data.allAirtable).map(flattenAirtableNode);
+      return <EventsSection events={events} />;
+    }}
   />
 );
 
