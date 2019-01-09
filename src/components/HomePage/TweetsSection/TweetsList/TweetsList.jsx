@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { TwitterTweetEmbed } from 'react-twitter-embed';
 
-import List from '../List';
-import { media } from '../../../styles/mixins';
-import { medLarge, small } from '../../../styles/variables';
+import List from '../../../common/List';
+import { media } from '../../../../styles/mixins';
+import { medLarge, small } from '../../../../styles/variables';
 
 const TweetCard = styled(List.Item)`
   list-style-type: none;
@@ -26,11 +26,6 @@ const TweetCard = styled(List.Item)`
     margin-right: 2%;
     margin-left: 2%;
   `}
-
-  .twitter-tweet {
-    max-height: 12em;
-    overflow: auto;
-  }
 `;
 
 const TweetsList = ({ tweets }) => (

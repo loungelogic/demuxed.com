@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { darken } from 'polished';
 
-import Button from '../Button';
-import { fontSize, transitionAll } from '../../../styles/mixins';
-import { brandGrey, buttonFont } from '../../../styles/variables';
+import Button from '../../../common/Button';
+import { fontSize, transitionAll } from '../../../../styles/mixins';
+import { brandGrey, buttonFont } from '../../../../styles/variables';
 
 const EmailInput = styled.input`
   ${fontSize('12px')};

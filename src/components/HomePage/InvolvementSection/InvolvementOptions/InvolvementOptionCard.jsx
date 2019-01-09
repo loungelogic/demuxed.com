@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-import Button from '../Button';
-import List from '../List';
-import { fontSize, media } from '../../../styles/mixins';
-import { defaultSerif, large, medium } from '../../../styles/variables';
+import Button from '../../../common/Button';
+import List from '../../../common/List';
+import { fontSize, media } from '../../../../styles/mixins';
+import { defaultSerif, large, medium } from '../../../../styles/variables';
 
 const InvolvementOptionCard = styled(List.Item)`
   list-style-type: none;

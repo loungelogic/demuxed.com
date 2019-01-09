@@ -2,11 +2,11 @@ import React from 'react';
 
 import IOCard from './InvolvementOptionCard';
 import MailingListSubscriptionForm from './MailingListSubscriptionForm';
-import Link from '../Link';
-import List from '../List';
-import podcastIcon from '../../../images/podcast-illustration.svg';
-import slackIcon from '../../../images/slack-illustration.svg';
-import subscribeIcon from '../../../images/subscribe-illustration.svg';
+import Link from '../../../common/Link';
+import List from '../../../common/List';
+import podcastIcon from '../../../../images/podcast-illustration.svg';
+import slackIcon from '../../../../images/slack-illustration.svg';
+import subscribeIcon from '../../../../images/subscribe-illustration.svg';
 
 const InvolvementOptions = () => (
   <List>

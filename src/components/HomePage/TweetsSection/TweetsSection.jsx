@@ -1,6 +1,6 @@
 import React from 'react';
 
-import TweetsList from '../../common/TweetsList';
+import TweetsList from './TweetsList';
 import PageSection from '../../common/PageSection';
 
 const TweetsSection = ({ tweets }) => (

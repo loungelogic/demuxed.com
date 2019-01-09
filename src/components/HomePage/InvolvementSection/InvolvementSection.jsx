@@ -1,6 +1,6 @@
 import React from 'react';
 
-import InvolvementOptions from '../../common/InvolvementOptions';
+import InvolvementOptions from './InvolvementOptions';
 import PageSection from '../../common/PageSection';
 
 const InvolvementSection = () => (
