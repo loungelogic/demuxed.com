@@ -8,7 +8,14 @@ import VideoCard from './VideoCard';
 const VideosList = ({ videos }) => (
   <List>
     {videos.map((item, i) => (
-      <VideoCard key={i} {...item} />
+      <VideoCard
+        key={i}
+        title={item.frontmatter.title}
+        author={item.frontmatter.author}
+        date={item.frontmatter.date}
+        description={item.frontmatter.description}
+        html={item.html}
+      />
     ))}
   </List>
 );

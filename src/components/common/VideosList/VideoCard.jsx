@@ -29,7 +29,7 @@ const StyledListItem = styled(List.Item)`
   `}
 `;
 
-const VideoIframe = styled.iframe`
+const VideoWrapper = styled.div`
   height: 216px;
   width: 100%;
 `;
@@ -69,10 +69,10 @@ const VideoDesc = styled.p`
 `;
 
 const VideoCard = ({
-  title, author, date, description, url,
+  title, author, date, description, html,
 }) => (
   <StyledListItem>
-    <VideoIframe frameBorder="0" src={url} />
+    <VideoWrapper dangerouslySetInnerHTML={{ __html: html }} />
     <VideoDetails>
       <VideoTitle>{title}</VideoTitle>
       <VideoAuthor>{author}</VideoAuthor>
@@ -87,7 +87,7 @@ VideoCard.propTypes = {
   author: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired,
+  html: PropTypes.string.isRequired,
 };
 
 export default VideoCard;

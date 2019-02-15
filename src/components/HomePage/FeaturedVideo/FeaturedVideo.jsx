@@ -7,7 +7,7 @@ import VideoDescription from './VideoDescription';
 import { media } from '../../../styles/mixins';
 import { xlLarge } from '../../../styles/variables';
 
-const Iframe = styled.iframe`
+const VideoWrapper = styled.div`
   height: 360px;
   width: 100%;
   max-width: 706px;
@@ -19,24 +19,23 @@ const Iframe = styled.iframe`
 `;
 
 const FeaturedVideo = ({
-  description, url, fullVideoUrl, viewMoreUrl,
+  frontmatter, html,
 }) => (
   <PageSection clearfix>
     <VideoDescription
-      description={description}
-      url={url}
-      fullVideoUrl={fullVideoUrl}
-      viewMoreUrl={viewMoreUrl}
+      description={frontmatter.description}
+      tags={frontmatter.tags}
     />
-    <Iframe frameBorder="0" src={url} />
+    <VideoWrapper dangerouslySetInnerHTML={{ __html: html }} />
   </PageSection>
 );
 
 FeaturedVideo.propTypes = {
-  description: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired,
-  fullVideoUrl: PropTypes.string.isRequired,
-  viewMoreUrl: PropTypes.string.isRequired,
+  frontmatter: PropTypes.shape({
+    description: PropTypes.string.isRequired,
+    tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+  }).isRequired,
+  html: PropTypes.string.isRequired,
 };
 
 export default FeaturedVideo;
