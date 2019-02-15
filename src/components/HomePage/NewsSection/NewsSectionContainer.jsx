@@ -8,19 +8,21 @@ const NewsSectionContainer = () => (
   <StaticQuery
     query={graphql`
       query {
-        allNewsJson {
+        allMarkdownRemark (filter: { fileAbsolutePath: { regex: "/news/" } }) {
           edges {
             node {
-              title
-              date
-              description
-              url
+              frontmatter {
+                title
+                date
+                url
+              }
+              html
             }
           }
         }
       }
     `}
-    render={data => <NewsSection news={extractNodes(data.allNewsJson)} />}
+    render={data => <NewsSection news={extractNodes(data.allMarkdownRemark)} />}
   />
 );
 

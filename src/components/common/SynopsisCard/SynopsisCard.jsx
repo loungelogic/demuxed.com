@@ -53,9 +53,11 @@ const SubHeading = styled.h4`
   text-transform: uppercase;
 `;
 
-const Text = styled.p`
-  line-height: 1.6em;
-  margin-bottom: 2em;
+const Text = styled.div`
+  p {
+    line-height: 1.6em;
+    margin-bottom: 2em;
+  }
 `;
 
 const StyledButton = styled(Button)`
@@ -63,14 +65,14 @@ const StyledButton = styled(Button)`
 `;
 
 const SynopsisCard = ({
-  heading, subHeading, text, url,
+  heading, subHeading, html, url,
 }) => (
   <StyledListItem>
     <Heading>{heading}</Heading>
     <SubHeading>{subHeading}</SubHeading>
-    <Text>{text}</Text>
+    <Text dangerouslySetInnerHTML={{ __html: html }} />
     <StyledButton as={Link} to={url}>
-      Learn more
+      View Full
     </StyledButton>
   </StyledListItem>
 );
@@ -78,7 +80,7 @@ const SynopsisCard = ({
 SynopsisCard.propTypes = {
   heading: PropTypes.string.isRequired,
   subHeading: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
+  html: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
 };
 

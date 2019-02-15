@@ -10,10 +10,10 @@ const NewsList = ({ news }) => (
     {news.map((item, i) => (
       <SynopsisCard
         key={i}
-        heading={item.title}
-        subHeading={item.date}
-        text={item.description}
-        url={item.url}
+        heading={item.frontmatter.title}
+        subHeading={item.frontmatter.date}
+        html={item.html}
+        url={item.frontmatter.url}
       />
     ))}
   </List>
