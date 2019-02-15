@@ -57,6 +57,12 @@ const Text = styled.div`
   p {
     line-height: 1.6em;
     margin-bottom: 2em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    max-height: 6em;
   }
 `;
 
