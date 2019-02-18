@@ -25,6 +25,7 @@ const FeaturedVideo = ({
     <VideoDescription
       description={frontmatter.description}
       tags={frontmatter.tags}
+      url={frontmatter.url}
     />
     <VideoWrapper dangerouslySetInnerHTML={{ __html: html }} />
   </PageSection>
@@ -34,6 +35,7 @@ FeaturedVideo.propTypes = {
   frontmatter: PropTypes.shape({
     description: PropTypes.string.isRequired,
     tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+    url: PropTypes.string.isRequired,
   }).isRequired,
   html: PropTypes.string.isRequired,
 };

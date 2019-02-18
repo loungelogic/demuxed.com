@@ -19,6 +19,7 @@ const FeaturedVideoContainer = () => (
               frontmatter {
                 description
                 tags
+                url
               }
               html
             }
