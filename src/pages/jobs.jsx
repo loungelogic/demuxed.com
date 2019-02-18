@@ -1,12 +1,12 @@
-// import React from 'react';
+import React from 'react';
 
-// import Layout from '../components/common/Layout';
-// import JobsSection from '../components/JobsPage/JobsSection';
+import Layout from '../components/common/Layout';
+import JobsSection from '../components/JobsPage/JobsSection';
 
-// const JobsPage = () => (
-//   <Layout>
-//     <JobsSection />
-//   </Layout>
-// );
+const JobsPage = () => (
+  <Layout>
+    <JobsSection />
+  </Layout>
+);
 
-// export default JobsPage;
+export default JobsPage;
