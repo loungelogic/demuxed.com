@@ -8,17 +8,16 @@ const TweetsSectionContainer = () => (
   <StaticQuery
     query={graphql`
       query {
-        allTweetsJson {
+        allTweet {
           edges {
             node {
-              id
+              tweetId: id_str
             }
           }
         }
       }
     `}
-    render={data => <TweetsSection tweets={extractNodes(data.allTweetsJson)} />
-    }
+    render={data => <TweetsSection tweets={extractNodes(data.allTweet)} />}
   />
 );
 

@@ -30,9 +30,9 @@ const TweetCard = styled(List.Item)`
 
 const TweetsList = ({ tweets }) => (
   <List>
-    {tweets.map(({ id }, i) => (
+    {tweets.map(({ tweetId }, i) => (
       <TweetCard key={i}>
-        <TwitterTweetEmbed tweetId={id} />
+        <TwitterTweetEmbed tweetId={tweetId} />
       </TweetCard>
     ))}
   </List>
