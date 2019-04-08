@@ -12,7 +12,7 @@ import { clearfix, media } from '../../../styles/mixins';
 const navItems = [
   { caption: 'Home', path: '/' },
   { caption: 'Events', path: '/events' },
-  { caption: 'Jobs', path: '/jobs' },
+  // { caption: 'Jobs', path: '/jobs' },
   { caption: 'Videos', path: '/videos' },
   { caption: 'About', path: '/about' },
 ];

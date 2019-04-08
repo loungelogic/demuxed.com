@@ -7,20 +7,28 @@ const FeaturedVideoContainer = () => (
   <StaticQuery
     query={graphql`
       query {
-        allFeaturedVideoJson {
+        allMarkdownRemark (
+          filter: {
+            fileAbsolutePath: { regex: "/videos/" },
+            frontmatter: { showOnHomePage: { eq: true } }
+          },
+          limit: 1
+        ) {
           edges {
             node {
-              description
-              url
-              fullVideoUrl
-              viewMoreUrl
+              frontmatter {
+                description
+                tags
+                url
+              }
+              html
             }
           }
         }
       }
     `}
     render={(data) => {
-      const featuredVideoData = data.allFeaturedVideoJson.edges[0].node;
+      const featuredVideoData = data.allMarkdownRemark.edges[0].node;
       return <FeaturedVideo {...featuredVideoData} />;
     }}
   />

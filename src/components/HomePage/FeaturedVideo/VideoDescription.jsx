@@ -59,14 +59,14 @@ const MoreButton = styled(StyledButton)`
   }
 `;
 
-const VideoDescription = ({ description, fullVideoUrl, viewMoreUrl }) => (
+const VideoDescription = ({ description, tags, url }) => (
   <VideoDescriptionWrapper>
     <StyledSectionHeading>Featured video</StyledSectionHeading>
     <Paragraph>{description}</Paragraph>
-    <StyledButton as={Link} to={fullVideoUrl}>
+    <StyledButton as={Link} to={url} target="_blank">
       View full video
     </StyledButton>
-    <MoreButton as={Link} to={viewMoreUrl}>
+    <MoreButton as={Link} to={`/videos/?tag=${tags[0]}`}>
       See more like this
     </MoreButton>
   </VideoDescriptionWrapper>
@@ -74,8 +74,8 @@ const VideoDescription = ({ description, fullVideoUrl, viewMoreUrl }) => (
 
 VideoDescription.propTypes = {
   description: PropTypes.string.isRequired,
-  fullVideoUrl: PropTypes.string.isRequired,
-  viewMoreUrl: PropTypes.string.isRequired,
+  tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+  url: PropTypes.string.isRequired,
 };
 
 export default VideoDescription;

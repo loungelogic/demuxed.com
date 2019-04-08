@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
   siteMetadata: {
     title: 'Demuxed, the conference for video engineers',
@@ -53,6 +55,17 @@ module.exports = {
             tableView: `All`,
           },
         ],
+      },
+    },
+    {
+      resolve: 'gatsby-source-twitter',
+      options: {
+        q: 'from:demuxed',
+        credentials: {
+          consumer_key: process.env.TWITTER_CONSUMER_KEY,
+          consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
+          bearer_token: process.env.TWITTER_BEARER_TOKEN,
+        },
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

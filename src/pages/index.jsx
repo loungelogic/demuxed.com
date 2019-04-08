@@ -6,7 +6,7 @@ import NewsSection from '../components/HomePage/NewsSection';
 import HomePageEventsSection from '../components/HomePage/EventsSection';
 import TweetsSection from '../components/HomePage/TweetsSection';
 import FeaturedVideo from '../components/HomePage/FeaturedVideo';
-import HomePageJobsSection from '../components/HomePage/JobsSection';
+// import HomePageJobsSection from '../components/HomePage/JobsSection';
 import InvolvementSection from '../components/HomePage/InvolvementSection';
 
 const IndexPage = () => (
@@ -16,7 +16,7 @@ const IndexPage = () => (
     <HomePageEventsSection />
     <TweetsSection />
     <FeaturedVideo />
-    <HomePageJobsSection />
+    {/* <HomePageJobsSection /> */}
     <InvolvementSection />
   </Layout>
 );

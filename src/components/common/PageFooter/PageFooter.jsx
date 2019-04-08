@@ -16,7 +16,7 @@ const navBlocks = [
     links: [
       { to: '/', caption: 'Home' },
       { to: '/events', caption: 'Events' },
-      { to: '/jobs', caption: 'Jobs' },
+      // { to: '/jobs', caption: 'Jobs' },
       { to: '/videos', caption: 'Videos' },
       { to: '/about', caption: 'About' },
       { to: 'mailto:info@demuxed.com', caption: 'info@demuxed.com' },
